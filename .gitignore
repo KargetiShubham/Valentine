@@ -1,0 +1,15 @@
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (if you add Node modules later)
+node_modules/
