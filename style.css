@@ -4,47 +4,58 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   background: linear-gradient(135deg, #ff9a9e, #fad0c4);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
 .container {
   background: white;
-  padding: 30px 40px;
+  padding: 30px 20px;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
 }
 
 h1 {
   margin-bottom: 30px;
   color: #ff4d6d;
+  font-size: 24px;
+  line-height: 1.3;
 }
 
 .buttons {
   position: relative;
-  height: 60px;
+  min-height: 60px;
+  margin-bottom: 20px;
 }
 
 button {
-  padding: 12px 24px;
-  font-size: 18px;
+  padding: 15px 25px;
+  font-size: 16px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
+  min-width: 80px;
+  touch-action: manipulation;
 }
-.text{
-    margin-top: 1em;
+
+.text {
+  margin-top: 1em;
+  font-size: 14px;
 }
 
 #yesBtn {
   background: #ff4d6d;
   color: white;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 #noBtn {
@@ -54,10 +65,70 @@ button {
 }
 
 #result img {
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   margin-top: 20px;
+  border-radius: 15px;
 }
 
 .hidden {
   display: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 14px;
+    min-width: 70px;
+  }
+
+  #yesBtn {
+    margin-right: 8px;
+    margin-bottom: 10px;
+  }
+
+  #result img {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 15px 12px;
+  }
+
+  h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 15px;
+    font-size: 13px;
+    min-width: 60px;
+  }
+
+  .buttons {
+    min-height: 50px;
+  }
+
+  .text {
+    font-size: 12px;
+    margin-top: 0.8em;
+  }
+
+  #result img {
+    max-width: 150px;
+  }
 }
